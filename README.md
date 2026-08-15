@@ -10,7 +10,9 @@ Developed a full-stack corporate website for an international recruitment agency
 - Django admin panel for content management
 - Automatic content translation fallback
 - Contact form
-
+- Email notifications
+- Telegram bot notifications
+  
 ## 🛠 Tech Stack
 
 Python
