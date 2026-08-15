@@ -2,24 +2,27 @@
 ## https://everstaff.agency/
 Corporate website for an international recruitment agency specializing in executive search and complex hiring.
 
+Developed a full-stack corporate website for an international recruitment agency using Django. Implemented responsive UI, multilingual content management, SEO optimization, and deployed the application on a Linux VPS using Gunicorn and Nginx.
 ## 🚀 Features
 - Responsive design
-- Django backend
-- SEO optimized
-- Control 90% information in admin panel 
-- Contact forms
-- mobile design optimization 
-- Auto translate if admin put english version empty
+- Mobile-first optimization
+- SEO optimization
+- Django admin panel for content management
+- Automatic content translation fallback
+- Contact form
 
 ## 🛠 Tech Stack
 
-- Python
-- Django
-- HTML
-- CSS
-- JavaScript
-- Bootstrap
-- MySQL
+Python
+Django
+MySQL
+HTML5
+CSS3
+JavaScript
+Bootstrap
+Nginx
+Gunicorn
+Git
 
 ## 📸 Screenshots
 
@@ -31,7 +34,7 @@ Corporate website for an international recruitment agency specializing in execut
 ## ⚙️ Installation
 
 ```bash
-git clone ...
+git clone https://github.com/Nikits569/everstaff.git
 cd everstaff
 pip install -r requirements.txt
 python manage.py migrate
