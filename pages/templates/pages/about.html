@@ -1,0 +1,264 @@
+{% load static i18n %}
+{% load localize_field %}
+<!DOCTYPE html>
+<html lang="{{ SITE_LANG|default:'uk' }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% trans "Про нас — EVERSTAFF" %}</title>
+<meta name="description" content="{% trans "EVERSTAFF — команда професіоналів з досвідом у виробництві, агро, комерції та послугах. Дізнайтесь, хто підбирає кандидатів для вашого бізнесу." %}">
+<meta property="og:title" content="{% trans "Про нас — EVERSTAFF" %}">
+<meta property="og:description" content="{% trans "Молода, проактивна і амбітна міжнародна рекрутингова агенція з українським корінням." %}">
+<meta property="og:type" content="website">
+<link rel="canonical" href="{% url 'about' %}">
+<link rel="icon" href="{% static 'pages/images/logo.png' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'pages/css/style.css' %}">
+</head>
+
+<body>
+
+{% if messages %}
+  <div class="toast-messages" id="toast-messages">
+    {% for message in messages %}
+      <div class="toast-message {{ message.tags }}">
+        <span>{{ message }}</span>
+        <button type="button" class="toast-close" aria-label="{% trans "Закрити" %}">&times;</button>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+<header class="site-header">
+  <div class="container">
+    <a href="{% url 'home' %}" class="brand">
+      <img src="{% static 'pages/images/logo.png' %}" alt="{% trans "EVERSTAFF — кадри вирішують" %}">
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="{% url 'home' %}">{% trans "Головна" %}</a></li>
+        <li><a href="{% url 'about' %}" class="active">{% trans "Про нас" %}</a></li>
+        <li><a href="{% url 'services' %}">{% trans "Послуги" %}</a></li>
+        <li><a href="{% url 'contacts' %}">{% trans "Контакти" %}</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switch" data-open="false">
+        <button type="button" aria-haspopup="true" aria-expanded="false">
+          <span class="current-lang">{% if SITE_LANG == 'en' %}English{% else %}Українська{% endif %}</span>
+          <svg viewBox="0 0 12 8" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+        <div class="lang-switch-menu">
+          <a href="#" class="lang-option {% if SITE_LANG == 'uk' %}active{% endif %}" data-lang="uk">{% trans "Українська" %}</a>
+          <a href="#" class="lang-option {% if SITE_LANG == 'en' %}active{% endif %}" data-lang="en">{% trans "English" %}</a>
+        </div>
+      </div>
+      <a href="{% url 'contacts' %}" class="btn btn-primary btn-sm">{% trans "Залишити заявку" %}</a>
+      <button type="button" class="nav-toggle" aria-label="{% trans "Меню" %}" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-top">
+      <a href="{% url 'home' %}" class="brand">
+        <img src="{% static 'pages/images/logo.png' %}" alt="{% trans "EVERSTAFF — кадри вирішують" %}">
+      </a>
+      <button type="button" class="mobile-menu-close" id="mobile-menu-close" aria-label="{% trans "Закрити меню" %}">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu-body">
+      <div class="mobile-menu-links">
+        <a href="{% url 'home' %}">{% trans "Головна" %}</a>
+        <a href="{% url 'about' %}" class="active">{% trans "Про нас" %}</a>
+        <a href="{% url 'services' %}">{% trans "Послуги" %}</a>
+        <a href="{% url 'contacts' %}">{% trans "Контакти" %}</a>
+      </div>
+      <a href="{% url 'contacts' %}" class="btn btn-primary btn-block mobile-menu-cta">{% trans "Залишити заявку" %}</a>
+      <div class="mobile-menu-lang">
+        <a href="#" class="lang-option {% if SITE_LANG == 'uk' %}active{% endif %}" data-lang="uk">{% trans "UA" %}</a>
+        <a href="#" class="lang-option {% if SITE_LANG == 'en' %}active{% endif %}" data-lang="en">{% trans "EN" %}</a>
+      </div>
+    </div>
+  </div>
+
+
+<main>
+
+  <!-- HERO / INTRO -->
+  <section class="hero" style="padding-bottom:60px;">
+    <div class="container">
+      <div class="split">
+        <div>
+          <span class="eyebrow">{% trans "Хто ми" %}</span>
+          <h1 style="font-size:clamp(30px,3.6vw,44px); margin-bottom:20px;">{% field AboutPage "label" %}</h1>
+          <p class="hero-lead">{% field AboutPage "title" %}</p>
+
+          <button type="button" class="more-btn" data-expand-toggle="about-intro" data-label-more="{% trans "Дізнатись більше про нас" %}" data-label-less="{% trans "Згорнути" %}" aria-expanded="false">
+            <span>{% trans "Дізнатись більше про нас" %}</span>
+            <svg viewBox="0 0 12 8" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+          <div class="expand" id="about-intro">
+            <div class="expand-inner">
+              {% field AboutPage "description" as about_description %}{{ about_description|linebreaks }}
+            </div>
+          </div>
+
+          <div class="stats">
+            <div class="stat"><strong>10+</strong><span>{% trans "років у побудові команд і процесів" %}</span></div>
+            <div class="stat"><strong>1000+</strong><span>{% trans "особисто проведених інтерв'ю" %}</span></div>
+            <div class="stat"><strong>3</strong><span>{% trans "континенти пошуку кандидатів" %}</span></div>
+          </div>
+        </div>
+
+        <div class="split-media">
+          {% if AboutPage.img %}
+            <img src="{{ AboutPage.img.url }}">
+          {% else %}
+            <img src="{% static 'pages/images/placeholder-wide.svg' %}">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head center" style="margin-bottom:48px;">
+        <span class="eyebrow">{% trans "Команда" %}</span>
+        <h2>{% trans "Наша команда" %}</h2>
+      </div>
+
+      <div class="grid grid-3">
+        {% for member in OurTeamAboutPage %}
+        <div class="card team-card">
+          {% if member.img %}
+            <img src="{{ member.img.url }}" alt="{{ member.name_surname }} — фото">
+          {% else %}
+            <img src="{% static 'pages/images/placeholder-portrait.svg' %}" alt="{{ member.name_surname }} — фото">
+          {% endif %}
+
+          <h3>{{ member.name_surname }}</h3>
+          <span class="team-role">{% field member "profession" %}</span>
+          <p class="card-text">{% field member "begin_text" %}</p>
+
+          <button type="button" class="more-btn" data-expand-toggle="team-{{ member.pk }}" data-label-more="{% trans "Детальніше" %}" data-label-less="{% trans "Згорнути" %}" aria-expanded="false">
+            <span>{% trans "Детальніше" %}</span>
+            <svg viewBox="0 0 12 8" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+          <div class="expand" id="team-{{ member.pk }}">
+            <div class="expand-inner">
+              {% field member "description" as member_description %}{{ member_description|linebreaks }}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="cta-banner-text">
+          <h2>{% trans "Готові познайомитись особисто?" %}</h2>
+          <p>{% trans "Зв'яжіться з нами у зручний для вас спосіб — ми завжди поруч для підтримки і розвитку вашого бізнесу." %}</p>
+        </div>
+        <div class="cta-banner-actions">
+          <a href="{% url 'contacts' %}" class="btn btn-primary">{% trans "Зв'язатися з нами" %}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <a href="{% url 'home' %}" class="brand">
+        <img src="{% static 'pages/images/logo-mark.png' %}" alt="{% trans "EVERSTAFF — кадри вирішують" %}">
+      </a>
+      {% if SITE_LANG == 'en' %}
+        <p>{{ contact.text_under_logo_en }}</p>
+      {% else %}
+        <p>{{ contact.text_under_logo }}</p>
+      {% endif %}
+      <div class="social-row">
+        <a href="{{ contact.linkedin }}" aria-label="{% trans "LinkedIn" %}" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3a1.97 1.97 0 1 0 0 3.94 1.97 1.97 0 0 0 0-3.94ZM20.44 20h-3.37v-5.9c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.53-2.26 3.1V20H9.5V8.5h3.24v1.57h.05c.45-.86 1.56-1.77 3.21-1.77 3.44 0 4.44 2.27 4.44 5.2V20Z" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>{% trans "Навігація" %}</h4>
+      <ul>
+        <li><a href="{% url 'home' %}">{% trans "Головна" %}</a></li>
+        <li><a href="{% url 'about' %}">{% trans "Про нас" %}</a></li>
+        <li><a href="{% url 'services' %}">{% trans "Послуги" %}</a></li>
+        <li><a href="{% url 'contacts' %}">{% trans "Контакти" %}</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>{% trans "Контакти" %}</h4>
+      <ul>
+        <li><a href="tel:+380993123711">{{ contact.number }}</a></li>
+        <li><a href="mailto:everstaff@ukr.net">{{ contact.email }}</a></li>
+        <li>{% field contact "adress" %}</li>
+      </ul>
+    </div>
+
+  </div>
+
+  {% if partner %}
+    <div class="partners">
+      <div class="container">
+        <p class="partners-label">{% trans "Нам довіряють" %}</p>
+        <div class="partners-row">
+          {% for i in partner %}
+            <a href="{% if i.link %} {{ i.link }} {% else %} # {% endif %}"><img src="{{ i.img.url }}"></a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="container footer-bottom">
+    <span>© 2024–2026 EVERSTAFF. {% trans "Усі права захищені." %}</span>
+    {% if SITE_LANG == 'en' %}
+        <span>{{ contact.text_slogan_en }}</span>
+    {% else %}
+        <span>{{ contact.text_slogan }}</span>
+    {% endif %}
+  </div>
+</footer>
+
+<script src="{% static 'pages/js/main.js' %}"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Открытие/закрытие выпадающего меню уже реализовано в main.js.
+    // Здесь только простановка cookie при выборе языка.
+    document.querySelectorAll('.lang-option').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var lang = this.dataset.lang;
+        document.cookie = 'site_lang=' + lang + '; path=/; max-age=' + (60 * 60 * 24 * 365);
+        window.location.reload();
+      });
+    });
+  });
+</script>
+</body>
+</html>

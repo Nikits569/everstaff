@@ -1,0 +1,264 @@
+{% load static i18n %}
+{% load localize_field %}
+
+<!DOCTYPE html>
+<html lang="{{ SITE_LANG|default:'uk' }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% trans "Контакти — EVERSTAFF" %}</title>
+<meta name="description" content="{% trans "Зв'яжіться з EVERSTAFF: телефон, e-mail та адреса офісу. Залиште заявку — ми обговоримо задачу та запропонуємо оптимальний формат пошуку." %}">
+<meta property="og:title" content="{% trans "Контакти — EVERSTAFF" %}">
+<meta property="og:description" content="{% trans "Залиште заявку, і ми зв'яжемось з вами, щоб допомогти знайти потрібних людей для вашого бізнесу." %}">
+<meta property="og:type" content="website">
+<link rel="canonical" href="{% url 'contacts' %}">
+<link rel="icon" href="{% static 'pages/images/logo.png' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'pages/css/style.css' %}">
+</head>
+<body>
+
+{% if messages %}
+  <div class="toast-messages" id="toast-messages">
+    {% for message in messages %}
+      <div class="toast-message {{ message.tags }}">
+        <span>{{ message }}</span>
+        <button type="button" class="toast-close" aria-label="{% trans "Закрити" %}">&times;</button>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+<header class="site-header">
+  <div class="container">
+    <a href="{% url 'home' %}" class="brand">
+      <img src="{% static 'pages/images/logo.png' %}" alt="{% trans "EVERSTAFF — кадри вирішують" %}">
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="{% url 'home' %}">{% trans "Головна" %}</a></li>
+        <li><a href="{% url 'about' %}">{% trans "Про нас" %}</a></li>
+        <li><a href="{% url 'services' %}">{% trans "Послуги" %}</a></li>
+        <li><a href="{% url 'contacts' %}" class="active">{% trans "Контакти" %}</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switch" data-open="false">
+        <button type="button" aria-haspopup="true" aria-expanded="false">
+          <span class="current-lang">{% if SITE_LANG == 'en' %}English{% else %}Українська{% endif %}</span>
+          <svg viewBox="0 0 12 8" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+        <div class="lang-switch-menu">
+          <a href="#" class="lang-option {% if SITE_LANG == 'uk' %}active{% endif %}" data-lang="uk">{% trans "Українська" %}</a>
+          <a href="#" class="lang-option {% if SITE_LANG == 'en' %}active{% endif %}" data-lang="en">{% trans "English" %}</a>
+        </div>
+      </div>
+      <a href="{% url 'contacts' %}" class="btn btn-primary btn-sm">{% trans "Залишити заявку" %}</a>
+      <button type="button" class="nav-toggle" aria-label="{% trans "Меню" %}" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-top">
+      <a href="{% url 'home' %}" class="brand">
+        <img src="{% static 'pages/images/logo.png' %}" alt="{% trans "EVERSTAFF — кадри вирішують" %}">
+      </a>
+      <button type="button" class="mobile-menu-close" id="mobile-menu-close" aria-label="{% trans "Закрити меню" %}">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu-body">
+      <div class="mobile-menu-links">
+        <a href="{% url 'home' %}">{% trans "Головна" %}</a>
+        <a href="{% url 'about' %}">{% trans "Про нас" %}</a>
+        <a href="{% url 'services' %}">{% trans "Послуги" %}</a>
+        <a href="{% url 'contacts' %}" class="active">{% trans "Контакти" %}</a>
+      </div>
+      <a href="{% url 'contacts' %}" class="btn btn-primary btn-block mobile-menu-cta">{% trans "Залишити заявку" %}</a>
+      <div class="mobile-menu-lang">
+        <a href="#" class="lang-option {% if SITE_LANG == 'uk' %}active{% endif %}" data-lang="uk">{% trans "UA" %}</a>
+        <a href="#" class="lang-option {% if SITE_LANG == 'en' %}active{% endif %}" data-lang="en">{% trans "EN" %}</a>
+      </div>
+    </div>
+  </div>
+
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" style="padding-bottom:20px;">
+    <div class="container">
+      <span class="eyebrow">{% trans "Контакти" %}</span>
+      <h1 style="font-size:clamp(30px,3.8vw,46px); max-width:760px; margin-bottom:20px;">{% field contact_page "title" %}</h1>
+      <p class="hero-lead" style="max-width:640px;">{% field contact_page "text" %}</p>
+    </div>
+  </section>
+
+  <!-- FORM + INFO -->
+  <section class="section" style="padding-top:24px;">
+    <div class="container">
+     <div class="split" style="align-items:flex-start;">
+
+       <div class="card" style="padding:40px;">
+         <h3 style="margin-bottom:24px;">{% trans "Залишити заявку" %}</h3>
+         <form method="post" action="">
+           {% csrf_token %}
+           <div class="form-grid">
+             <div class="field">
+               <label for="f-name">{% trans "Ваше ім'я" %} *</label>
+               <input type="text" id="f-name" name="name_surname" placeholder="{% trans "Ім'я Прізвище" %}" required>
+             </div>
+             <div class="field">
+               <label for="f-email">{% trans "E-mail" %} *</label>
+               <input type="email" id="f-email" name="email" placeholder="name@company.com" required>
+             </div>
+             <div class="field">
+               <label for="f-country">{% trans "Країна" %} *</label>
+               <input type="text" id="f-country" name="country" placeholder="{% trans "Україна" %}" required>
+             </div>
+             <div class="field">
+               <label for="f-city">{% trans "Місто" %} *</label>
+               <input type="text" id="f-city" name="city" placeholder="{% trans "Київ" %}" required>
+             </div>
+             <div class="field full">
+               <label for="f-subject">{% trans "Тема" %} *</label>
+               <input type="text" id="f-subject" name="title" placeholder="{% trans "Наприклад: пошук фінансового директора" %}" required>
+             </div>
+             <div class="field full">
+               <label for="f-message">{% trans "Повідомлення" %}</label>
+               <textarea id="f-message" name="text" placeholder="{% trans "Розкажіть коротко про вашу задачу" %}"></textarea>
+             </div>
+             <div class="field full">
+               <button type="submit" class="btn btn-primary btn-block">{% trans "Надіслати заявку" %}</button>
+             </div>
+           </div>
+         </form>
+       </div>
+
+        <div>
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h3l2 5-2.5 1.5a11 11 0 0 0 5 5L15 12l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+              <div>
+                <h4>{% trans "Телефон" %}</h4>
+                <a href="tel:+380993123711">{{ contact_page.number }}</a>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v14H4V5Zm0 0 8 7 8-7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+              <div>
+                <h4>{% trans "Ел. пошта" %}</h4>
+                <a href="mailto:everstaff@ukr.net">{{ contact_page.email }}</a>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="2"/></svg></div>
+              <div>
+                <h4>{% trans "Адреса" %}</h4>
+                <p>{% field contact_page "adress" %}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-placeholder" style="margin-top:28px;">
+            <iframe  alt="{% trans "Карта - розташування офісу" %}" style="width:100%; height:100%; object-fit:cover;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.307085570611!2d30.34230072304596!3d50.404338406238224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cbad6af07b07%3A0x447ebc88213f1de1!2z0JrQu9GD0LHQvdCwLCAxMtCxLCDQodC-0YTRltGX0LLRgdGM0LrQsCDQkdC-0YDRidCw0LPRltCy0LrQsCwg0JrQuNGX0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwg0KPQutGA0LDQuNC90LAsIDA4MTQ3!5e0!3m2!1sru!2ssk!4v1784914840688!5m2!1sru!2ssk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+
+          <div class="social-row" style="margin-top:24px;">
+            <a href="https://www.linkedin.com/company/everstaff-agency" aria-label="{% trans "LinkedIn" %}" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3a1.97 1.97 0 1 0 0 3.94 1.97 1.97 0 0 0 0-3.94ZM20.44 20h-3.37v-5.9c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.53-2.26 3.1V20H9.5V8.5h3.24v1.57h.05c.45-.86 1.56-1.77 3.21-1.77 3.44 0 4.44 2.27 4.44 5.2V20Z" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <a href="{% url 'home' %}" class="brand">
+        <img src="{% static 'pages/images/logo-mark.png' %}" alt="{% trans "EVERSTAFF — кадри вирішують" %}">
+      </a>
+      {% if SITE_LANG == 'en' %}
+        <p>{{ contact.text_under_logo_en }}</p>
+      {% else %}
+        <p>{{ contact.text_under_logo }}</p>
+      {% endif %}
+      <div class="social-row">
+        <a href="{{ contact.linkedin }}" aria-label="{% trans "LinkedIn" %}" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3a1.97 1.97 0 1 0 0 3.94 1.97 1.97 0 0 0 0-3.94ZM20.44 20h-3.37v-5.9c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.53-2.26 3.1V20H9.5V8.5h3.24v1.57h.05c.45-.86 1.56-1.77 3.21-1.77 3.44 0 4.44 2.27 4.44 5.2V20Z" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>{% trans "Навігація" %}</h4>
+      <ul>
+        <li><a href="{% url 'home' %}">{% trans "Головна" %}</a></li>
+        <li><a href="{% url 'about' %}">{% trans "Про нас" %}</a></li>
+        <li><a href="{% url 'services' %}">{% trans "Послуги" %}</a></li>
+        <li><a href="{% url 'contacts' %}">{% trans "Контакти" %}</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>{% trans "Контакти" %}</h4>
+      <ul>
+        <li><a href="tel:+380993123711">{{ contact.number }}</a></li>
+        <li><a href="mailto:everstaff@ukr.net">{{ contact.email }}</a></li>
+        <li>{% field contact "adress" %}</li>
+      </ul>
+    </div>
+
+  </div>
+  {% if partner %}
+  <div class="partners">
+    <div class="container">
+      <p class="partners-label">{% trans "Нам довіряють" %}</p>
+      <div class="partners-row">
+        {% for i in partner %}
+          <a href="{% if i.link %} {{ i.link }} {% else %} # {% endif %}"><img src="{{ i.img.url }}"></a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  <div class="container footer-bottom">
+    <span>© 2024–2026 EVERSTAFF. {% trans "Усі права захищені." %}</span>
+    {% if SITE_LANG == 'en' %}
+        <span>{{ contact.text_slogan_en }}</span>
+    {% else %}
+        <span>{{ contact.text_slogan }}</span>
+    {% endif %}
+  </div>
+</footer>
+
+<script src="{% static 'pages/js/main.js' %}"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Открытие/закрытие выпадающего меню уже реализовано в main.js.
+    // Здесь только простановка cookie при выборе языка.
+    document.querySelectorAll('.lang-option').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var lang = this.dataset.lang;
+        document.cookie = 'site_lang=' + lang + '; path=/; max-age=' + (60 * 60 * 24 * 365);
+        window.location.reload();
+      });
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,475 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-26 19:52+0200\n"
+"PO-Revision-Date: 2026-07-26 20:00+0200\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: .\pages\templates\pages\about.html:8 .\pages\templates\pages\about.html:10
+msgid "Про нас — EVERSTAFF"
+msgstr "Про нас — EVERSTAFF"
+
+#: .\pages\templates\pages\about.html:9
+msgid ""
+"EVERSTAFF — команда професіоналів з досвідом у виробництві, агро, комерції "
+"та послугах. Дізнайтесь, хто підбирає кандидатів для вашого бізнесу."
+msgstr ""
+"EVERSTAFF — команда професіоналів з досвідом у виробництві, агро, комерції "
+"та послугах. Дізнайтесь, хто підбирає кандидатів для вашого бізнесу."
+
+#: .\pages\templates\pages\about.html:11
+msgid ""
+"Молода, проактивна і амбітна міжнародна рекрутингова агенція з українським "
+"корінням."
+msgstr ""
+"Молода, проактивна і амбітна міжнародна рекрутингова агенція з українським "
+"корінням."
+
+#: .\pages\templates\pages\about.html:28
+#: .\pages\templates\pages\contacts.html:28
+#: .\pages\templates\pages\index.html:29
+#: .\pages\templates\pages\services.html:28
+msgid "Закрити"
+msgstr "Закрити"
+
+#: .\pages\templates\pages\about.html:37 .\pages\templates\pages\about.html:71
+#: .\pages\templates\pages\about.html:189
+#: .\pages\templates\pages\contacts.html:37
+#: .\pages\templates\pages\contacts.html:71
+#: .\pages\templates\pages\contacts.html:191
+#: .\pages\templates\pages\index.html:38 .\pages\templates\pages\index.html:72
+#: .\pages\templates\pages\index.html:284
+#: .\pages\templates\pages\services.html:37
+#: .\pages\templates\pages\services.html:71
+#: .\pages\templates\pages\services.html:223
+msgid "EVERSTAFF — кадри вирішують"
+msgstr "EVERSTAFF — кадри вирішують"
+
+#: .\pages\templates\pages\about.html:42 .\pages\templates\pages\about.html:79
+#: .\pages\templates\pages\about.html:202
+#: .\pages\templates\pages\contacts.html:42
+#: .\pages\templates\pages\contacts.html:79
+#: .\pages\templates\pages\contacts.html:204
+#: .\pages\templates\pages\index.html:43 .\pages\templates\pages\index.html:80
+#: .\pages\templates\pages\index.html:297
+#: .\pages\templates\pages\services.html:42
+#: .\pages\templates\pages\services.html:79
+#: .\pages\templates\pages\services.html:236
+msgid "Головна"
+msgstr "Головна"
+
+#: .\pages\templates\pages\about.html:43 .\pages\templates\pages\about.html:80
+#: .\pages\templates\pages\about.html:203
+#: .\pages\templates\pages\contacts.html:43
+#: .\pages\templates\pages\contacts.html:80
+#: .\pages\templates\pages\contacts.html:205
+#: .\pages\templates\pages\index.html:44 .\pages\templates\pages\index.html:81
+#: .\pages\templates\pages\index.html:298
+#: .\pages\templates\pages\services.html:43
+#: .\pages\templates\pages\services.html:80
+#: .\pages\templates\pages\services.html:237
+msgid "Про нас"
+msgstr "Про нас"
+
+#: .\pages\templates\pages\about.html:44 .\pages\templates\pages\about.html:81
+#: .\pages\templates\pages\about.html:204
+#: .\pages\templates\pages\contacts.html:44
+#: .\pages\templates\pages\contacts.html:81
+#: .\pages\templates\pages\contacts.html:206
+#: .\pages\templates\pages\index.html:45 .\pages\templates\pages\index.html:82
+#: .\pages\templates\pages\index.html:299
+#: .\pages\templates\pages\services.html:44
+#: .\pages\templates\pages\services.html:81
+#: .\pages\templates\pages\services.html:98
+#: .\pages\templates\pages\services.html:238
+msgid "Послуги"
+msgstr "Послуги"
+
+#: .\pages\templates\pages\about.html:45 .\pages\templates\pages\about.html:82
+#: .\pages\templates\pages\about.html:205
+#: .\pages\templates\pages\about.html:210
+#: .\pages\templates\pages\contacts.html:45
+#: .\pages\templates\pages\contacts.html:82
+#: .\pages\templates\pages\contacts.html:98
+#: .\pages\templates\pages\contacts.html:207
+#: .\pages\templates\pages\contacts.html:212
+#: .\pages\templates\pages\index.html:46 .\pages\templates\pages\index.html:83
+#: .\pages\templates\pages\index.html:300
+#: .\pages\templates\pages\index.html:305
+#: .\pages\templates\pages\services.html:45
+#: .\pages\templates\pages\services.html:82
+#: .\pages\templates\pages\services.html:239
+#: .\pages\templates\pages\services.html:244
+msgid "Контакти"
+msgstr "Контакти"
+
+#: .\pages\templates\pages\about.html:56
+#: .\pages\templates\pages\contacts.html:56
+#: .\pages\templates\pages\index.html:57
+#: .\pages\templates\pages\services.html:56
+msgid "Українська"
+msgstr "Українська"
+
+#: .\pages\templates\pages\about.html:57
+#: .\pages\templates\pages\contacts.html:57
+#: .\pages\templates\pages\index.html:58
+#: .\pages\templates\pages\services.html:57
+msgid "English"
+msgstr "English"
+
+#: .\pages\templates\pages\about.html:60 .\pages\templates\pages\about.html:84
+#: .\pages\templates\pages\contacts.html:60
+#: .\pages\templates\pages\contacts.html:84
+#: .\pages\templates\pages\contacts.html:110
+#: .\pages\templates\pages\index.html:61 .\pages\templates\pages\index.html:85
+#: .\pages\templates\pages\index.html:106
+#: .\pages\templates\pages\services.html:60
+#: .\pages\templates\pages\services.html:84
+#: .\pages\templates\pages\services.html:211
+msgid "Залишити заявку"
+msgstr "Залишити заявку"
+
+#: .\pages\templates\pages\about.html:61
+#: .\pages\templates\pages\contacts.html:61
+#: .\pages\templates\pages\index.html:62
+#: .\pages\templates\pages\services.html:61
+msgid "Меню"
+msgstr "Меню"
+
+#: .\pages\templates\pages\about.html:73
+#: .\pages\templates\pages\contacts.html:73
+#: .\pages\templates\pages\index.html:74
+#: .\pages\templates\pages\services.html:73
+msgid "Закрити меню"
+msgstr "Закрити меню"
+
+#: .\pages\templates\pages\about.html:86
+#: .\pages\templates\pages\contacts.html:86
+#: .\pages\templates\pages\index.html:87
+#: .\pages\templates\pages\services.html:86
+msgid "UA"
+msgstr "UA"
+
+#: .\pages\templates\pages\about.html:87
+#: .\pages\templates\pages\contacts.html:87
+#: .\pages\templates\pages\index.html:88
+#: .\pages\templates\pages\services.html:87
+msgid "EN"
+msgstr "EN"
+
+#: .\pages\templates\pages\about.html:100
+msgid "Хто ми"
+msgstr "Хто ми"
+
+#: .\pages\templates\pages\about.html:104
+#: .\pages\templates\pages\about.html:105
+msgid "Дізнатись більше про нас"
+msgstr "Дізнатись більше про нас"
+
+#: .\pages\templates\pages\about.html:104
+#: .\pages\templates\pages\about.html:153
+#: .\pages\templates\pages\index.html:167
+#: .\pages\templates\pages\services.html:130
+#: .\pages\templates\pages\services.html:168
+msgid "Згорнути"
+msgstr "Згорнути"
+
+#: .\pages\templates\pages\about.html:115
+msgid "років у побудові команд і процесів"
+msgstr "років у побудові команд і процесів"
+
+#: .\pages\templates\pages\about.html:116
+msgid "особисто проведених інтерв'ю"
+msgstr "особисто проведених інтерв'ю"
+
+#: .\pages\templates\pages\about.html:117
+msgid "континенти пошуку кандидатів"
+msgstr "континенти пошуку кандидатів"
+
+#: .\pages\templates\pages\about.html:136
+msgid "Команда"
+msgstr "Команда"
+
+#: .\pages\templates\pages\about.html:137
+msgid "Наша команда"
+msgstr "Наша команда"
+
+#: .\pages\templates\pages\about.html:153
+#: .\pages\templates\pages\about.html:154
+#: .\pages\templates\pages\index.html:269
+#: .\pages\templates\pages\services.html:130
+#: .\pages\templates\pages\services.html:131
+#: .\pages\templates\pages\services.html:168
+#: .\pages\templates\pages\services.html:169
+msgid "Детальніше"
+msgstr "Детальніше"
+
+#: .\pages\templates\pages\about.html:173
+msgid "Готові познайомитись особисто?"
+msgstr "Готові познайомитись особисто?"
+
+#: .\pages\templates\pages\about.html:174
+msgid ""
+"Зв'яжіться з нами у зручний для вас спосіб — ми завжди поруч для підтримки і "
+"розвитку вашого бізнесу."
+msgstr ""
+"Зв'яжіться з нами у зручний для вас спосіб — ми завжди поруч для підтримки і "
+"розвитку вашого бізнесу."
+
+#: .\pages\templates\pages\about.html:177
+msgid "Зв'язатися з нами"
+msgstr "Зв'язатися з нами"
+
+#: .\pages\templates\pages\about.html:191
+#: .\pages\templates\pages\contacts.html:193
+#: .\pages\templates\pages\index.html:286
+#: .\pages\templates\pages\services.html:225
+msgid ""
+"Міжнародна рекрутингова агенція з українським корінням. Знаходимо людей, які "
+"рухають ваш бізнес уперед."
+msgstr ""
+"Міжнародна рекрутингова агенція з українським корінням. Знаходимо людей, які "
+"рухають ваш бізнес уперед."
+
+#: .\pages\templates\pages\about.html:193
+#: .\pages\templates\pages\contacts.html:175
+#: .\pages\templates\pages\contacts.html:195
+#: .\pages\templates\pages\index.html:288
+#: .\pages\templates\pages\services.html:227
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: .\pages\templates\pages\about.html:200
+#: .\pages\templates\pages\contacts.html:202
+#: .\pages\templates\pages\index.html:295
+#: .\pages\templates\pages\services.html:234
+msgid "Навігація"
+msgstr "Навігація"
+
+#: .\pages\templates\pages\about.html:222
+#: .\pages\templates\pages\contacts.html:224
+#: .\pages\templates\pages\index.html:317
+#: .\pages\templates\pages\services.html:256
+msgid "Нам довіряють"
+msgstr "Нам довіряють"
+
+#: .\pages\templates\pages\about.html:232
+#: .\pages\templates\pages\contacts.html:234
+#: .\pages\templates\pages\index.html:327
+#: .\pages\templates\pages\services.html:266
+msgid "Усі права захищені."
+msgstr "Усі права захищені."
+
+#: .\pages\templates\pages\about.html:233
+#: .\pages\templates\pages\contacts.html:235
+#: .\pages\templates\pages\index.html:328
+#: .\pages\templates\pages\services.html:267
+msgid "Кадри вирішують."
+msgstr "Кадри вирішують."
+
+#: .\pages\templates\pages\contacts.html:9
+#: .\pages\templates\pages\contacts.html:11
+msgid "Контакти — EVERSTAFF"
+msgstr "Контакти — EVERSTAFF"
+
+#: .\pages\templates\pages\contacts.html:10
+msgid ""
+"Зв'яжіться з EVERSTAFF: телефон, e-mail та адреса офісу. Залиште заявку — ми "
+"обговоримо задачу та запропонуємо оптимальний формат пошуку."
+msgstr ""
+"Зв'яжіться з EVERSTAFF: телефон, e-mail та адреса офісу. Залиште заявку — ми "
+"обговоримо задачу та запропонуємо оптимальний формат пошуку."
+
+#: .\pages\templates\pages\contacts.html:12
+msgid ""
+"Залиште заявку, і ми зв'яжемось з вами, щоб допомогти знайти потрібних людей "
+"для вашого бізнесу."
+msgstr ""
+"Залиште заявку, і ми зв'яжемось з вами, щоб допомогти знайти потрібних людей "
+"для вашого бізнесу."
+
+#: .\pages\templates\pages\contacts.html:115
+msgid "Ваше ім'я"
+msgstr "Ваше ім'я"
+
+#: .\pages\templates\pages\contacts.html:116
+msgid "Ім'я Прізвище"
+msgstr "Ім'я Прізвище"
+
+#: .\pages\templates\pages\contacts.html:119
+msgid "E-mail"
+msgstr "E-mail"
+
+#: .\pages\templates\pages\contacts.html:123
+msgid "Країна"
+msgstr "Країна"
+
+#: .\pages\templates\pages\contacts.html:124
+msgid "Україна"
+msgstr "Україна"
+
+#: .\pages\templates\pages\contacts.html:127
+msgid "Місто"
+msgstr "Місто"
+
+#: .\pages\templates\pages\contacts.html:128
+msgid "Київ"
+msgstr "Київ"
+
+#: .\pages\templates\pages\contacts.html:131
+msgid "Тема"
+msgstr "Тема"
+
+#: .\pages\templates\pages\contacts.html:132
+msgid "Наприклад: пошук фінансового директора"
+msgstr "Наприклад: пошук фінансового директора"
+
+#: .\pages\templates\pages\contacts.html:135
+msgid "Повідомлення"
+msgstr "Повідомлення"
+
+#: .\pages\templates\pages\contacts.html:136
+msgid "Розкажіть коротко про вашу задачу"
+msgstr "Розкажіть коротко про вашу задачу"
+
+#: .\pages\templates\pages\contacts.html:139
+msgid "Надіслати заявку"
+msgstr "Надіслати заявку"
+
+#: .\pages\templates\pages\contacts.html:150
+msgid "Телефон"
+msgstr "Телефон"
+
+#: .\pages\templates\pages\contacts.html:157
+msgid "Ел. пошта"
+msgstr "Ел. пошта"
+
+#: .\pages\templates\pages\contacts.html:164
+msgid "Адреса"
+msgstr "Адреса"
+
+#: .\pages\templates\pages\contacts.html:171
+msgid "Карта - розташування офісу"
+msgstr "Карта - розташування офісу"
+
+#: .\pages\templates\pages\index.html:10 .\pages\templates\pages\index.html:12
+msgid "EVERSTAFF — рекрутингова агенція для агробізнесу"
+msgstr "EVERSTAFF — рекрутингова агенція для агробізнесу"
+
+#: .\pages\templates\pages\index.html:11
+msgid ""
+"EVERSTAFF — міжнародна рекрутингова агенція з українським корінням. Підбір "
+"топ-менеджерів, мідл-фахівців та унікальних кадрів для агробізнесу, "
+"логістики та B2B продажів."
+msgstr ""
+"EVERSTAFF — міжнародна рекрутингова агенція з українським корінням. Підбір "
+"топ-менеджерів, мідл-фахівців та унікальних кадрів для агробізнесу, "
+"логістики та B2B продажів."
+
+#: .\pages\templates\pages\index.html:13
+msgid ""
+"Знаходимо людей, які рухають ваш бізнес уперед. Точковий пошук там, де "
+"стандартний рекрутинг не працює."
+msgstr ""
+"Знаходимо людей, які рухають ваш бізнес уперед. Точковий пошук там, де "
+"стандартний рекрутинг не працює."
+
+#: .\pages\templates\pages\index.html:100
+msgid "Рекрутинг для агробізнесу та суміжних галузей"
+msgstr "Рекрутинг для агробізнесу та суміжних галузей"
+
+#: .\pages\templates\pages\index.html:107
+#: .\pages\templates\pages\index.html:166
+#: .\pages\templates\pages\index.html:169
+msgid "Дізнатись більше"
+msgstr "Дізнатись більше"
+
+#: .\pages\templates\pages\index.html:154
+msgid "Наш підхід"
+msgstr "Наш підхід"
+
+#: .\pages\templates\pages\index.html:155
+msgid "Ми працюємо не на кількість — нас залучають заради результату"
+msgstr "Ми працюємо не на кількість — нас залучають заради результату"
+
+#: .\pages\templates\pages\index.html:203
+msgid "З ким і над чим ми працюємо"
+msgstr "З ким і над чим ми працюємо"
+
+#: .\pages\templates\pages\index.html:208
+msgid "Рівні позицій"
+msgstr "Рівні позицій"
+
+#: .\pages\templates\pages\index.html:218
+msgid "Галузі, з якими ми працюємо"
+msgstr "Галузі, з якими ми працюємо"
+
+#: .\pages\templates\pages\index.html:258
+msgid "Додаткові рішення"
+msgstr "Додаткові рішення"
+
+#: .\pages\templates\pages\index.html:259
+msgid "Підтримка суміжних HR-завдань"
+msgstr "Підтримка суміжних HR-завдань"
+
+#: .\pages\templates\pages\index.html:260
+msgid ""
+"Окрім рекрутингу, ми можемо підтримати компанію в суміжних HR-завданнях."
+msgstr ""
+"Окрім рекрутингу, ми можемо підтримати компанію в суміжних HR-завданнях."
+
+#: .\pages\templates\pages\services.html:9
+#: .\pages\templates\pages\services.html:11
+msgid "Послуги — EVERSTAFF"
+msgstr "Послуги — EVERSTAFF"
+
+#: .\pages\templates\pages\services.html:10
+msgid ""
+"Рекрутинг топ-менеджерів, мідл-фахівців та унікальних спеціалістів, аудит "
+"організаційної структури, оренда HR-менеджера та outplacement."
+msgstr ""
+"Рекрутинг топ-менеджерів, мідл-фахівців та унікальних спеціалістів, аудит "
+"організаційної структури, оренда HR-менеджера та outplacement."
+
+#: .\pages\templates\pages\services.html:12
+msgid ""
+"Наші послуги для бізнесу: рекрутинг, аудит структури, оренда HR-менеджера, "
+"outplacement."
+msgstr ""
+"Наші послуги для бізнесу: рекрутинг, аудит структури, оренда HR-менеджера, "
+"outplacement."
+
+#: .\pages\templates\pages\services.html:113
+msgid "Рекрутинг"
+msgstr "Рекрутинг"
+
+#: .\pages\templates\pages\services.html:114
+msgid "Пошук фахівців будь-якого рівня"
+msgstr "Пошук фахівців будь-якого рівня"
+
+#: .\pages\templates\pages\services.html:207
+msgid "Готові дізнатись більше?"
+msgstr "Готові дізнатись більше?"
+
+#: .\pages\templates\pages\services.html:208
+msgid ""
+"Ми розробимо персоналізовану пропозицію, яка враховує ваші потреби та "
+"специфіку бізнесу."
+msgstr ""
+"Ми розробимо персоналізовану пропозицію, яка враховує ваші потреби та "
+"специфіку бізнесу."
